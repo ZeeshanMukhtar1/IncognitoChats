@@ -17,6 +17,10 @@ export async function middleware(request: NextRequest) {
   ) {
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
+  if (!token && url.pathname.startsWith('/dashboard')) {
+    return NextResponse.redirect(new URL('/sihn-in', request.url));
+  }
+  return NextResponse.next();
 }
 
 // this is the file in which we tell WHERE the MIDDLEWARE should be applied 😊
