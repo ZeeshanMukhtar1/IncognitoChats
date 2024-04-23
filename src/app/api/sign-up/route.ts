@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   await dbConnect();
   try {
     const { username, email, password } = await request.json(); // always use await with request.json() because it returns a promise
-    
+
     // check the user that alredy registered by username and verified as well
     const existingUserVerifiedByUsername = await UserModel.findOne({
       username,
@@ -24,14 +24,14 @@ export async function POST(request: Request) {
         }
       );
     }
-    const existingUSerByEmail = await UserModel.findOne(email);
+    const existingUSerByEmail = await UserModel.findOne({ email });
     const verifyCode = Math.floor(100000 + Math.random() * 900000).toString(); // random 6 digit code
     if (existingUSerByEmail) {
       if (existingUSerByEmail.isVerified) {
         return Response.json(
           {
             success: false,
-            message: 'Email already registered with this email.',
+            message: 'Email already registered with this account.',
           },
           {
             status: 400,
