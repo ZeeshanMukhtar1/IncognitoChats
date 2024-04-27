@@ -1,6 +1,7 @@
 //  docs Links 🎗
 //  resend email : https://resend.com/
 //  react email : https://react.email/
+// docs links for getting verification code : https://resend.com/emails
 
 import { resend } from '@/lib/resend';
 import VerificationEmail from '../../emails/VerificationEmail';
@@ -13,7 +14,7 @@ export async function sendVerificationEmail(
 ): Promise<ApiResponse> {
   try {
     await resend.emails.send({
-      from: 'dev@hiteshchoudhary.com',
+      from: 'onboarding@resend.dev', // it will be the default email from the config of resend
       to: email,
       subject: 'Mystery Message Verification Code',
       react: VerificationEmail({ username, otp: verifyCode }),
