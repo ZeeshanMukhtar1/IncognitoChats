@@ -67,7 +67,7 @@ const UserSchema: Schema<User> = new Schema({
     type: Boolean,
     default: true,
   },
-  message: [MessageSchema],
+  messages: [MessageSchema],
 });
 
 // In Express, the server continues running once it boots up. However, in Next.js, it's not inherently aware of whether the app is booting up for the first time or not. It runs on Edge time so we have to check for the existing presence 😶
