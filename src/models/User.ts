@@ -28,7 +28,7 @@ export interface User extends Document {
   isVerified: boolean;
   isAcceptingMessages: boolean;
   // attaching user and messages together
-  message: Message[];
+  messages: Message[];
 }
 
 const UserSchema: Schema<User> = new Schema({
