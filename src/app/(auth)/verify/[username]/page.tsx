@@ -69,7 +69,7 @@ const verifyAccount = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Verification Code</FormLabel>
-                  <Input {...field} />
+                  <Input autoFocus {...field} />
                   <FormMessage />
                 </FormItem>
               )}

@@ -1,5 +1,4 @@
 // docs link for login Ui from next js  😯 : https://next-auth.js.org/getting-started/example
-
 // docs link for Shade cn : https://ui.shadcn.com/docs/components/toast
 // docs link for DeBounceValue  website : https://usehooks-ts.com/react-hook/use-debounce-value
 'use client';
@@ -122,7 +121,7 @@ const page = () => {
                   {!isCheckingUsername && usernameMsg && (
                     <p
                       className={`text-sm ${
-                        usernameMsg === 'Username is unique'
+                        usernameMsg === 'Username available'
                           ? 'text-green-500'
                           : 'text-red-500'
                       }`}

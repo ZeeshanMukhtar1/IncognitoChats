@@ -31,6 +31,7 @@ export default function SignInForm() {
 
   const { toast } = useToast();
   const onSubmit = async (data: z.infer<typeof signinSchema>) => {
+    console.table(data);
     try {
       const result = await signIn('credentials', {
         redirect: false,
@@ -41,7 +42,6 @@ export default function SignInForm() {
       if (!result) {
         throw new Error('SignIn function returned undefined');
       }
-
       if (result.error) {
         if (result.error === 'CredentialsSignin') {
           toast({
@@ -88,7 +88,7 @@ export default function SignInForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Email/Username</FormLabel>
-                  <Input {...field} />
+                  <Input autoFocus {...field} />
                   <FormMessage />
                 </FormItem>
               )}

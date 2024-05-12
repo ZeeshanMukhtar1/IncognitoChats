@@ -30,7 +30,7 @@ export async function GET(request: Request) {
     };
     // validating username with Zod schema
     const result = usernameQuerySchema.safeParse(queryParam);
-    console.log('result: ', result);
+    // console.log('result: ', result);
     // if username is not valid
     if (!result.success) {
       const usernameError = result.error.format().username?._errors || [];
