@@ -20,6 +20,6 @@ IncognitoChats is a full-stack web application built with Next.js, allowing user
 - [mongoose](https://mongoosejs.com/) - A MongoDB object modeling tool designed to work in an asynchronous environment. 🐆
 - [next-auth](https://next-auth.js.org/) - An authentication library for Next.js applications. 🔑
 - [tailwindcss](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs. 🎨
-- [zod](https://github.com/colinhacks/zod) - A TypeScript-first schema declaration and validation library. 🔍
+- [React Hook Form](https://www.react-hook-form.com/) - one such library that helps to manage complex forms.🔍
 - [Zod](https://zod.dev/) - TypeScript-first schema validation with static type inference. 🛠️
 - [Shadcn](https://shadcn.com/) - Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source. ✨
